@@ -1,0 +1,13 @@
+footer {
+  text-align: right;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 10px;
+  background: #97a5b154;
+  color: rgb(165, 165, 165);
+  width: 100%;
+}
+p {
+  padding-right: 70px;
+}
