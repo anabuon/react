@@ -12,16 +12,16 @@
 
 **index.js** file should just import the <App /> component and simply call the ReactDOM.render method. Also you need to store a variable here called **store**. This variable should be an object with required fields: **user** (contains **firstName** and **lastName**) and **avatar** (contains **url** and **alt**).  
 
-**index.css**(index.module.scss/index.scss) should just contain all the **basic styles** for your app (like rules for html, body)
+**index.css**(index.module.scss/index.scss) should just contain all the **basic styles** for your app (like rules for html, body)  
 ![img](https://user-images.githubusercontent.com/61491916/113913638-3ce6dd80-97e5-11eb-9f0e-b20b40d81592.png)  
-Each React component should have its own folder with the jsx and relevant stylesheets  
+Each React component should have its own folder with the jsx and relevant stylesheets   
 for example  
-![img](https://user-images.githubusercontent.com/61491916/113914117-d31b0380-97e5-11eb-8c61-f0bb2a3585ef.png)
+![img](https://user-images.githubusercontent.com/61491916/113914117-d31b0380-97e5-11eb-8c61-f0bb2a3585ef.png)  
 * Then you need to find a way on how to pass the store value through an App component to use this store value in a child components (Header, Content). Footer Component can be hardcoded for now.   
 
 Here is the diagram which explains basic data flow   
 
-![img](https://user-images.githubusercontent.com/61491916/113914368-268d5180-97e6-11eb-9e17-202e78664e91.png)
+![img](https://user-images.githubusercontent.com/61491916/113914368-268d5180-97e6-11eb-9e17-202e78664e91.png)  
 
 # Optional tasks 
 * use SCSS as a preprocessor 
