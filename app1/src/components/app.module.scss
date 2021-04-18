@@ -6,7 +6,12 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+.content {
+  background-image: url('https://gamehall.com.br/wp-content/uploads/2015/08/attack-on-titan-21-08-2015-grande-009.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -25,7 +30,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #fb6161;
 }
 
 @keyframes App-logo-spin {

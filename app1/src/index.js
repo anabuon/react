@@ -1,23 +1,24 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
-import App from './App'
+import './index.scss'
+import { App } from './components'
 import reportWebVitals from './reportWebVitals'
-
 const store = {
   user: {
-    firstName: 'Ana',
-    lastName: 'Buon',
+    firstName: 'ATTACK ON',
+    lastName: 'TITAN',
   },
   avatar: {
-    image: 'https://img.icons8.com/ios/452/javascript.png',
-    alt: 'JavaScript',
+    image:
+      'https://avatanplus.ru/files/resources/original/56ee322955b3a1539273f187.png',
+    alt: 'logo',
   },
 }
 
-ReactDOM.render(<App userData={store} />, document.getElementById('root'))
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+ReactDOM.render(
+  <React.StrictMode>
+    <App data={store} />
+  </React.StrictMode>,
+  document.getElementById('root')
+)
 reportWebVitals()
