@@ -35,5 +35,33 @@
   font-weight: 500;
 }
 .age {
-  font-weight: 600;
+  font-weight: 500;
+}
+
+.cross {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: #00000027;
+  border-radius: 50%;
+  border: 2px solid #00000027;
+  cursor: pointer;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 25%;
+    width: 50%;
+    box-shadow: 0 0 0 2px #00000077;
+    transform: rotate(-45deg);
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    left: 25%;
+    width: 50%;
+    box-shadow: 0 0 0 2px #00000077;
+    transform: rotate(45deg);
+  }
 }
