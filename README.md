@@ -53,3 +53,16 @@ The result should be something similar
 6)**\<CardsContainer/>** should fetch the data from our mockedApi and update it’s own state. After it the actual state should be mapped to a \<Card /> component. (don’t forget about key property)  
 ![img](https://user-images.githubusercontent.com/61491916/115148559-c8276500-a068-11eb-815d-44f242163b0a.png)  
 7)**If there is no cards yet render a fallback JSX like** \<div>No cards yet\</div>  
+
+# React Task 3
+***
+# Task: 
+
+**Summary**  
+Based on your 2nd task, make an additional opportunity to create and delete cards (for cards I mean any array of objects with image and description, for example const cards = \[{ id:1, category: ‘male’, imgUrl: ‘’, price: 100 }]).  
+
+**Requirements**  
+* Each **\<Card />** component could be deleted from catalogue by clicking on the cross button (❌) which can be placed somewhere on the top of each card. After clicking on the button the array of cards in your **\<CardsContainer />** should be updated.  
+* **\<CardsContainer />** component should also additionaly render **\<CardsCreationForm />** as its children. This form should contain all the required inputs for creating the card (find a way on how to use only 1 handler for all the inputs) and a submit button. By clicking on a submit button the array of cards in your **\<CardsContainer />** should be updated with the new card data.  
+* All the required handlers for creating/deleting cards should be in the **\<CardsContainer />** component and passed down to a child components as a **props**.  
+* Rewrite all classes components to functional components with hooks  
