@@ -96,7 +96,7 @@ Based on your previous tasks, add 3 routes to your application: login page(/logi
 
 **Important note: if the user in not logged in he should NOT able to view /profile and /cards pages** 
 
-# React Task 5 
+# React Task 6 
 ***
 # Task: 
 
