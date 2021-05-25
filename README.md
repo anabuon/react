@@ -67,7 +67,6 @@ Based on your 2nd task, make an additional opportunity to create and delete card
 * All the required handlers for creating/deleting cards should be in the **\<CardsContainer />** component and passed down to a child components as a **props**.  
 * Rewrite all classes components to functional components with hooks  
 
-
 # React Task 4 
 ***
 # Task: 
@@ -81,3 +80,17 @@ Based on your 2nd task, make an additional opportunity to create and delete card
 * use HTML scroll api https://developer.mozilla.org/ru/docs/Web/API/Element/scrollIntoView  
 
 **Note:**  the scroll API might not work as you expect (it depends on the position of your form), so if the form is placed at the bottom of the page there will be no visual ‘scrolling’ effect. **The main idea of the task is to validate your form.**  
+
+# React Task 5 
+***
+# Task: 
+**Summary**  
+Based on your previous tasks, add 3 routes to your application: login page(/login), your profile page(/pofile), and your page with cards(/cards).  
+
+**Requirements:** 
+* Your app should redirect the user to a login page (/login). You can do it using the history API from react-router. On this login page create a form with 2 inputs (username and password) with a submit button (use mocked logic for login).  
+* If the user successfully logged in, he can be able to view the profile(/profile) page and cards(/cards) page  
+* Profile page contains any data you like. (Add 2-3 sentences about yourself)  
+* Cards page should contain your \<CardsContainer /> component with all the logic you’ve done before (no additional code required)  
+
+**Important note: if the user in not logged in he should NOT able to view /profile and /cards pages** 
