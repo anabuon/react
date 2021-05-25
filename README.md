@@ -83,7 +83,8 @@ Based on your 2nd task, make an additional opportunity to create and delete card
 
 # React Task 5 
 ***
-# Task: 
+# Task:  
+
 **Summary**  
 Based on your previous tasks, add 3 routes to your application: login page(/login), your profile page(/pofile), and your page with cards(/cards).  
 
@@ -94,3 +95,19 @@ Based on your previous tasks, add 3 routes to your application: login page(/logi
 * Cards page should contain your \<CardsContainer /> component with all the logic you’ve done before (no additional code required)  
 
 **Important note: if the user in not logged in he should NOT able to view /profile and /cards pages** 
+
+# React Task 5 
+***
+# Task: 
+
+**Summary**  
+
+Based on your previous tasks integrate Redux for state management (you need both react and react-redux dependencies). 
+Store all the application data into Redux state (e.g. cards data, user data, authorization status).  
+
+**Implementation notes**  
+1)  Create an additional folder in your app ( store, redux or something else). This folder will contain the store of your whole application(createStore), all the required reducers for your app (if you have more than 1 reducer, don’t forget to **combine** them), contain all the required actions for your app (**type** is the only required field for **action**, other fields are up to you). You can create additional folders and files there if you need  
+2)  For using Redux with React you will need the **react-redux** library. Don’t forget to wrap the entire components hierarchy Provider component and pass the store as a prop to it.  
+Each component, which needs access to a redux storecan be wrapped with **connect(mapStateToProps, mapDispatchToProps)(YourComponent)** or you can use hooks (useDispatch, useSelector)  
+4)  Use **redux-thunk (purpose of redux-thunk, how to apply it to your store)** as middleware in order to ‘teach’ Redux to recognize special kinds of actions that are in fact functions. This middleware will help you to write the following ‘action-function’:  
+![img](https://user-images.githubusercontent.com/61491916/119480071-f7ad4980-bd59-11eb-8cb0-db13a3a607b5.png)
