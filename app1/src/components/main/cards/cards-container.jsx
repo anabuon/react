@@ -15,6 +15,7 @@ const CardsContainer = (props) => {
   const [genderValue, setGenderValue] = useState('male')
   const [ageValue, setAgeValue] = useState('')
   const [imageValue, setImageValue] = useState('')
+  const [isFieldEmpty, setIsFieldEmpty] = useState(false)
 
   const handleChangeTitle = (e) => {
     setTitleValue(e.target.value)
@@ -47,6 +48,7 @@ const CardsContainer = (props) => {
       ageValue !== '' &&
       imageValue !== ''
     ) {
+      setIsFieldEmpty(false)
       const arrayId = cards.length !== 0 ? cards.map((item) => item.id) : [1]
       const newId = Math.max(...arrayId)
       const newCard = {
@@ -61,7 +63,9 @@ const CardsContainer = (props) => {
       setAgeValue('')
       setGenderValue('male')
       setImageValue('')
+      return
     }
+    setIsFieldEmpty(true)
   }
 
   const handleClick = (e) => {
@@ -88,6 +92,7 @@ const CardsContainer = (props) => {
             genderValue={genderValue}
             ageValue={ageValue}
             imageValue={imageValue}
+            isFieldEmpty={isFieldEmpty}
           />
         </div>
       </section>
@@ -122,6 +127,7 @@ const CardsContainer = (props) => {
           genderValue={genderValue}
           ageValue={ageValue}
           imageValue={imageValue}
+          isFieldEmpty={isFieldEmpty}
         />
       </div>
     </section>

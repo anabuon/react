@@ -30,20 +30,43 @@
   &Text {
     margin-right: 30px;
   }
-  &Input {
-    width: 50%;
-    min-height: 20px;
-    padding: 5px;
-    font-size: 20px;
-    border-radius: 5px;
-    color: #f8f8e8;
-    background-color: #00000077;
-    border: 2px solid #00000027;
-    transition: 0.5s;
-    &:focus {
-      box-shadow: 0px 0px 2px 2px #ff9900af;
+  &Content {
+    display: flex;
+    flex-direction: column;
+    &Input {
+      width: 100%;
+      min-height: 20px;
+      padding: 5px;
+      font-size: 20px;
+      border-radius: 5px;
+      color: #f8f8e8;
+      background-color: #00000077;
+      border: 2px solid #00000027;
+      transition: 0.5s;
+      &Error {
+        box-shadow: 0px 0px 2px 2px #ff1e00af;
+        &:before {
+          position: absolute;
+          content: 'Error';
+          color: #ff1e00af;
+        }
+      }
+      &:focus {
+        box-shadow: 0px 0px 2px 2px #ff9900af;
+      }
+    }
+    &Message {
+      display: none;
+      margin-top: 3px;
+      color: #ff1e00af;
+      font-size: 12px;
+      text-shadow: none;
+      &Error {
+        display: inline;
+      }
     }
   }
+
   &Select {
     padding: 5px;
     width: 50%;
