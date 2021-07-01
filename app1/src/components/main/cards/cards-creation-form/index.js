@@ -1,2 +1,2 @@
-import CardsCreationForm from './cards-creation-form'
+import CardsCreationForm from './Cards-creation-form'
 export { CardsCreationForm }

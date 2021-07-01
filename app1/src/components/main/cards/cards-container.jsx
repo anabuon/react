@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { apiCall } from '../../../api/mockedAPI'
-import { Card } from './card'
-import styles from './cards-container.module.scss'
-import { CardsCreationForm } from './cards-creation-form'
+import { Card } from './Card'
+import styles from './Cards-container.module.scss'
+import { CardsCreationForm } from './Cards-creation-form'
 
 const CardsContainer = (props) => {
   useEffect(() => {

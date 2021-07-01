@@ -1,2 +1,2 @@
-import CardsConteiner from './cards-container'
-export { CardsConteiner }
+import CardsContainer from './Cards-container'
+export { CardsContainer }

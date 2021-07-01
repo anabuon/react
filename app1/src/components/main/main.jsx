@@ -1,11 +1,19 @@
-import CardsContainer from './cards/cards-container'
-import styles from './main.module.scss'
+import { Route } from 'react-router'
+import LoginContainer from '../Login/'
+import { CardsContainer } from './Cards'
+import styles from './Main.module.scss'
+import Profile from './Profile'
 
-const Main = ({ avatar }) => {
+const Main = ({ setIsAuth }) => {
   return (
     <main className={styles.content}>
-      <img src={avatar.image} alt={avatar.alt} className={styles.image} />
-      <CardsContainer />
+      {/* <img src={avatar.image} alt={avatar.alt} className={styles.image} /> */}
+      <Route path="/Cards" component={CardsContainer} />
+      <Route path="/Profile" component={Profile} />
+      <Route
+        path="/Login"
+        render={() => <LoginContainer setIsAuth={setIsAuth} />}
+      />
     </main>
   )
 }

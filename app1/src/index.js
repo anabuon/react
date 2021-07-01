@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import './index.scss'
 import { App } from './components'
 import reportWebVitals from './reportWebVitals'
+import { BrowserRouter } from 'react-router-dom'
 const store = {
   user: {
     firstName: 'ATTACK ON',
@@ -17,7 +18,9 @@ const store = {
 
 ReactDOM.render(
   <React.StrictMode>
-    <App data={store} />
+    <BrowserRouter>
+      <App data={store} />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 )

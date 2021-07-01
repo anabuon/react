@@ -1,4 +1,4 @@
-import styles from './cards-creation-form.module.scss'
+import styles from './Cards-creation-form.module.scss'
 
 const CardsCreationForm = ({
   handleSubmit,
