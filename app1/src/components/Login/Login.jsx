@@ -1,4 +1,5 @@
 import styles from './Login.module.scss'
+import userImage from '../../assets/user.svg'
 import lockImage from '../../assets/lock.svg'
 
 const Login = ({
@@ -18,11 +19,7 @@ const Login = ({
             !isFill.login && isTouch.login && styles.form_label_error
           }`}
         >
-          <img
-            className={styles.form_label__image}
-            src="https://i.pinimg.com/564x/38/c8/6a/38c86a20b6f1813687560df737def486.jpg"
-            alt=""
-          />
+          <img className={styles.form_label__image} src={userImage} alt="" />
           <input
             placeholder="User Name"
             type="text"

@@ -2,11 +2,11 @@
 import Home from './Home'
 import About from './About'
 
-const Profile = (props) => {
+const Profile = ({ fullName, position, info }) => {
   return (
     <>
-      <Home />
-      <About />
+      <Home fullName={fullName} position={position} />
+      <About info={info} />
     </>
   )
 }

@@ -1,18 +1,19 @@
-import { useState } from 'react'
+import { useSelector } from 'react-redux'
 import { Redirect } from 'react-router'
 import styles from './App.module.scss'
 import { Footer } from './Footer'
 import { Header } from './Header'
 import { Main } from './Main'
-const App = ({ data }) => {
-  const [isAuth, setIsAuth] = useState(false)
+
+const App = () => {
+  const auth = useSelector((state) => state.auth)
 
   return (
     <div className={styles.content}>
-      {!isAuth && <Redirect to="/Login" />}
-      <Header userData={data.user} isAuth={isAuth} />
-      <Main avatar={data.avatar} setIsAuth={setIsAuth} />
-      <Footer isAuth={isAuth} />
+      {!auth.isAuth && <Redirect to="/Login" />}
+      <Header isAuth={auth.isAuth} />
+      <Main />
+      <Footer isAuth={auth.isAuth} />
     </div>
   )
 }

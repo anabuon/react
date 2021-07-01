@@ -1,21 +1,27 @@
 import React, { useEffect, useState } from 'react'
-import { apiCall } from '../../../api/mockedAPI'
+import { useDispatch, useSelector } from 'react-redux'
+import {
+  getCards,
+  removeCard,
+  setCards,
+} from '../../../redux/actions/cardsAction'
 import { Card } from './Card'
 import styles from './Cards-container.module.scss'
 import { CardsCreationForm } from './Cards-creation-form'
 
-const CardsContainer = (props) => {
-  useEffect(() => {
-    apiCall().then((data) => {
-      setCards(data)
-    })
-  }, [])
-  const [cards, setCards] = useState([])
+const CardsContainer = () => {
+  const cards = useSelector((state) => state.cards.cards)
+  const dispatch = useDispatch()
+
   const [titleValue, setTitleValue] = useState('')
   const [genderValue, setGenderValue] = useState('male')
   const [ageValue, setAgeValue] = useState('')
   const [imageValue, setImageValue] = useState('')
   const [isFieldEmpty, setIsFieldEmpty] = useState(false)
+
+  useEffect(() => {
+    dispatch(getCards())
+  }, [dispatch])
 
   const handleChangeTitle = (e) => {
     setTitleValue(e.target.value)
@@ -26,18 +32,13 @@ const CardsContainer = (props) => {
   }
 
   const handleChangeAge = (e) => {
-    if (e.target.value >= 0 && e.target.value <= 120) {
+    if (e.target.value >= 18 && e.target.value <= 100) {
       setAgeValue(e.target.value)
     }
   }
 
   const handleChangeImage = (e) => {
     setImageValue(e.target.value)
-  }
-
-  const deleteCards = (id) => {
-    const newCardsData = cards.filter((item) => item.id !== Number(id))
-    setCards(newCardsData)
   }
 
   const handleSubmit = (e) => {
@@ -58,7 +59,7 @@ const CardsContainer = (props) => {
         imageUrl: imageValue,
         gender: genderValue,
       }
-      setCards([...cards, newCard])
+      dispatch(setCards([...cards, newCard]))
       setTitleValue('')
       setAgeValue('')
       setGenderValue('male')
@@ -71,7 +72,7 @@ const CardsContainer = (props) => {
   const handleClick = (e) => {
     const selectedCard = e.target.closest('button')
     if (selectedCard && selectedCard.dataset.name === 'cross') {
-      deleteCards(selectedCard.dataset.id)
+      dispatch(removeCard(selectedCard.dataset.id))
       return
     }
   }
@@ -133,4 +134,5 @@ const CardsContainer = (props) => {
     </section>
   )
 }
+
 export default CardsContainer
