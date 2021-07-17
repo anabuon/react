@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/react/static/css/main.bc26ae9b.chunk.css",
+    "main.js": "/react/static/js/main.1dd89d14.chunk.js",
+    "main.js.map": "/react/static/js/main.1dd89d14.chunk.js.map",
+    "runtime-main.js": "/react/static/js/runtime-main.40d06fb6.js",
+    "runtime-main.js.map": "/react/static/js/runtime-main.40d06fb6.js.map",
+    "static/js/2.49b5e660.chunk.js": "/react/static/js/2.49b5e660.chunk.js",
+    "static/js/2.49b5e660.chunk.js.map": "/react/static/js/2.49b5e660.chunk.js.map",
+    "static/js/3.2bb96d33.chunk.js": "/react/static/js/3.2bb96d33.chunk.js",
+    "static/js/3.2bb96d33.chunk.js.map": "/react/static/js/3.2bb96d33.chunk.js.map",
+    "index.html": "/react/index.html",
+    "static/css/main.bc26ae9b.chunk.css.map": "/react/static/css/main.bc26ae9b.chunk.css.map",
+    "static/js/2.49b5e660.chunk.js.LICENSE.txt": "/react/static/js/2.49b5e660.chunk.js.LICENSE.txt",
+    "static/media/armin.42e7ba40.png": "/react/static/media/armin.42e7ba40.png",
+    "static/media/bertolt.470c69a4.png": "/react/static/media/bertolt.470c69a4.png",
+    "static/media/eren.01697c0e.png": "/react/static/media/eren.01697c0e.png",
+    "static/media/hanji.e31f4cc7.png": "/react/static/media/hanji.e31f4cc7.png",
+    "static/media/levi.302aabf6.png": "/react/static/media/levi.302aabf6.png",
+    "static/media/lock.2f68a8fa.svg": "/react/static/media/lock.2f68a8fa.svg",
+    "static/media/mikasa.2cd6dd06.png": "/react/static/media/mikasa.2cd6dd06.png",
+    "static/media/user.d7553396.svg": "/react/static/media/user.d7553396.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.40d06fb6.js",
+    "static/js/2.49b5e660.chunk.js",
+    "static/css/main.bc26ae9b.chunk.css",
+    "static/js/main.1dd89d14.chunk.js"
+  ]
+}
