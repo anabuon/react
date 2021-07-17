@@ -32,7 +32,7 @@ const CardsContainer = () => {
   }
 
   const handleChangeAge = (e) => {
-    if (e.target.value >= 18 && e.target.value <= 100) {
+    if (e.target.value >= 0 && e.target.value <= 100) {
       setAgeValue(e.target.value)
     }
   }
