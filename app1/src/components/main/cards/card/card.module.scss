@@ -1,0 +1,67 @@
+.item {
+  position: relative;
+  margin: 10px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 400px;
+  height: 450px;
+  font-size: 18px;
+  z-index: 1;
+  transition: 0.3s;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 0 2px #00000077;
+  background-color: #00000027;
+}
+.image {
+  position: absolute;
+  height: 100%;
+  z-index: -1;
+}
+
+.description {
+  padding: 30px 5px;
+  background-color: #00000077;
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  margin-bottom: 10px;
+}
+.gender {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.age {
+  font-weight: 500;
+}
+
+.cross {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: #00000027;
+  border-radius: 50%;
+  border: 2px solid #00000027;
+  cursor: pointer;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 25%;
+    width: 50%;
+    box-shadow: 0 0 0 2px #00000077;
+    transform: rotate(-45deg);
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    left: 25%;
+    width: 50%;
+    box-shadow: 0 0 0 2px #00000077;
+    transform: rotate(45deg);
+  }
+}
